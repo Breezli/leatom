@@ -1,0 +1,28 @@
+/* 基础按钮样式 */
+.le-button-plus {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background-color: transparent;
+	overflow: hidden;
+}
+
+/* 公共变量 */
+:root {
+	--le-button-plus-radius: 0.75rem;
+	--le-button-plus-padding-x: 1.5rem;
+	--le-button-plus-padding-y: 0.5rem;
+	--le-button-plus-font-weight: 600;
+
+	/* 颜色变量 */
+	--le-color-white: #fff;
+	--le-color-black: #000;
+	--background: #fff;
+	--primary: #3b82f6;
+	--primary-foreground: #fff;
+	--ring: #3b82f680;
+}

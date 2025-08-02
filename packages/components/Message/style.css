@@ -1,0 +1,80 @@
+.le-message {
+	--le-message-bg-color: var(--le-color-info-light-9);
+	--le-message-border-color: var(--le-border-color-lighter);
+	--le-message-padding: 15px 19px;
+	--le-message-close-size: 16px;
+	--le-message-close-icon-color: var(--le-text-color-placeholder);
+	--le-message-close-hover-color: var(--le-text-color-secondary);
+	--le-message-icon-size: 16px;
+	--le-message-icon-margin: 8px;
+}
+
+.le-message {
+	width: fit-content;
+	max-width: calc(100% - 32px);
+	box-sizing: border-box;
+	border-radius: var(--le-border-radius-base);
+	border-width: var(--le-border-width);
+	border-style: var(--le-border-style);
+	border-color: var(--le-message-border-color);
+	position: fixed;
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+	background-color: var(--le-message-bg-color);
+	padding: var(--le-message-padding);
+	display: flex;
+	align-items: center;
+	transition: top var(--le-transition-duration),
+		opacity var(--le-transition-duration),
+		transform var(--le-transition-duration);
+	.le-message__icon {
+		color: var(--le-message-text-color);
+		font-size: var(--le-message-icon-size);
+		width: var(--le-message-icon-size);
+		margin-right: var(--le-message-icon-margin);
+	}
+	.le-message__content {
+		color: var(--le-message-text-color);
+		overflow-wrap: break-word;
+	}
+	&.is-close .le-message__content {
+		padding-right: 10px;
+	}
+	&.text-center {
+		justify-content: center;
+	}
+	.le-message__close {
+		display: flex;
+		align-items: center;
+	}
+	.le-message__close .le-icon {
+		cursor: pointer;
+	}
+}
+
+@each $val in info, success, warning, danger {
+	.le-message--$(val) {
+		--le-message-bg-color: var(--le-color-$(val)-light-9);
+		--le-message-border-color: var(--le-color-$(val)-light-8);
+		--le-message-text-color: var(--le-color-$(val));
+		.le-message__close {
+			--le-icon-color: var(--le-color-$(val));
+		}
+	}
+}
+
+.le-message--error {
+	--le-message-bg-color: var(--le-color-danger-light-9);
+	--le-message-border-color: var(--le-color-danger-light-8);
+	--le-message-text-color: var(--le-color-danger);
+	.le-message__close {
+		--le-icon-color: var(--le-color-danger);
+	}
+}
+
+.le-message.fade-up-enter-from,
+.le-message.fade-up-leave-to {
+	opacity: 0;
+	transform: translate(-50%, -100%);
+}

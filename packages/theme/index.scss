@@ -1,0 +1,83 @@
+@use 'sass:color';
+@import './reset.css';
+
+$colors: (
+	primary: #3B82F6, // 主色调：现代蓝
+	success: #10B981, // 成功绿
+	elegant: #6366F1, // 高雅紫
+	danger: #EF4444, // 错误红
+	warning: #F59E0B, // 警告黄
+	info: #909399, // 信息灰
+	light: #F3F4F6, // 浅灰背景
+	dark: #1F2937, // 深色文本
+);
+
+:root {
+	/* colors */
+	--le-color-white: #ffffff;
+	--le-color-black: #000000;
+	--le-bg-color: #ffffff;
+	--le-bg-color-page: #f9fafb;
+	--le-bg-color-overlay: #ffffff;
+	--le-text-color-primary: #303133;
+	--le-text-color-regular: #606266;
+	--le-text-color-secondary: #909399;
+	--le-text-color-placeholder: #a8abb2;
+	--le-text-color-disabled: #c0c4cc;
+	--le-border-color: #dcdfe6;
+	--le-border-color-light: #e4e7ed;
+	--le-border-color-lighter: #ebeef5;
+	--le-border-color-extra-light: #f2f6fc;
+	--le-border-color-dark: #d4d7de;
+	--le-border-color-darker: #cdd0d6;
+	--le-fill-color: #f0f2f5;
+	--le-fill-color-light: #f5f7fa;
+	--le-fill-color-lighter: #fafafa;
+	--le-fill-color-extra-light: #fafcff;
+	--le-fill-color-dark: #ebedf0;
+	--le-fill-color-darker: #e6e8eb;
+	--le-fill-color-blank: #ffffff;
+
+	@each $name, $color in $colors {
+		--le-color-#{$name}: #{$color};
+
+		@for $i from 3 through 9 {
+			--le-color-#{$name}-light-#{$i}: #{color.mix(#fff, $color, $i * 10%)};
+		}
+
+		--le-color-#{$name}-dark-2: #{color.mix(#000, $color, 20%)};
+	}
+
+	/* border */
+	--le-border-width: 1px;
+	--le-border-style: solid;
+	--le-border-color-hover: var(--le-text-color-disabled);
+	--le-border: var(--le-border-width) var(--le-border-style)
+		var(--le-border-color);
+	--le-border-radius-medium: 6px;
+	--le-border-radius-base: 4px;
+	--le-border-radius-small: 2px;
+	--le-border-radius-round: 20px;
+	--le-border-radius-circle: 100%;
+
+	/*font*/
+	--le-font-size-extra-large: 20px;
+	--le-font-size-large: 18px;
+	--le-font-size-medium: 16px;
+	--le-font-size-base: 14px;
+	--le-font-size-small: 13px;
+	--le-font-size-extra-small: 12px;
+	--le-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC',
+		'Hiragino Sans GB', 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial,
+		sans-serif;
+	--le-font-weight-primary: 500;
+
+	/*disabled*/
+	--le-disabled-bg-color: var(--le-fill-color-light);
+	--le-disabled-text-color: var(--le-text-color-placeholder);
+	--le-disabled-border-color: var(--le-border-color-light);
+
+	/*animation*/
+	--le-transition-duration: 0.4s;
+	--le-transition-duration-fast: 0.2s;
+}
