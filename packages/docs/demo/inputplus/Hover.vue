@@ -4,7 +4,7 @@
 </script>
 
 <template>
-	<le-input-plus
+	<le-input
 		v-model="inputValue"
 		placeholder="Enter text..."
 		class="input-element"

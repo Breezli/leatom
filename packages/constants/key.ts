@@ -1,1 +1,1 @@
-export const INSTALLED_KEY = Symbol("INSTALLED_KEY");
+export const INSTALLED_KEY = Symbol("INSTALLED_KEY"); // 标记组件库已经被安装

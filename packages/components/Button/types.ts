@@ -3,7 +3,7 @@ export type ButtonType = 'primary' | 'success' | 'elegant' | 'warning' | 'danger
 export type NativeType = 'button' | 'submit' | 'reset'
 export type ButtonSize = 'default' | 'large' | 'small'
 
-export interface ButtonProps {
+export interface ButtonProps { // 按钮属性
 	tag?: string | Component
 	type?: ButtonType
 	size?: ButtonSize
@@ -21,25 +21,25 @@ export interface ButtonProps {
 	throttleDuration?: number
 }
 
-export interface ButtonGroupProps {
+export interface ButtonGroupProps { // 按钮组属性
 	size?: ButtonSize
 	type?: ButtonType
 	disabled?: boolean
 }
 
-export interface ButtonGroupContext {
+export interface ButtonGroupContext { // 按钮组上下文
 	size?: ButtonSize
 	type?: ButtonType
 	disabled?: boolean
 }
 
-export interface ButtonEmits {
+export interface ButtonEmits { // 按钮事件
 	(e: 'click', value: MouseEvent): void
 }
 
-export interface ButtonInstance {
-	ref: Ref<HTMLButtonElement | void>
-	disabled: ComputedRef<boolean>
-	size: ComputedRef<string>
-	type: ComputedRef<string>
+export interface ButtonInstance { // 按钮实例
+	ref: Ref<HTMLButtonElement | void> // 按钮元素的引用
+	disabled: ComputedRef<boolean> // 计算属性，表示按钮是否禁用
+	size: ComputedRef<string> // 计算属性，表示按钮的大小
+	type: ComputedRef<string> // 计算属性，表示按钮的类型
 }

@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "pnpm --filter @leatom/play dev",
+		"dev": "pnpm --filter @leatom/play storybook",
 		"docs:dev": "pnpm --filter @leatom/docs dev",
 		"test": "pnpm --filter @leatom/components test",
 		"build": "run-s build-hooks build-components",

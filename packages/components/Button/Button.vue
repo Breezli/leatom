@@ -9,7 +9,7 @@
 	})
 	const props = withDefaults(defineProps<ButtonProps>(), { // 默认值
 		tag: 'button',
-		nativeType: 'button',
+		nativeType: 'button', // 原生 button 的 type 属性
 		useThrottle: true,
 		throttleDuration: 500,
 	})

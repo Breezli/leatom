@@ -6,6 +6,7 @@ import useId from './useId'
 // import useFocusController from './useFocusController'
 import useOffset from './useOffset'
 // import useMouseState from './useMouseState'
+import { useNamespace } from './useNamespace'
 
 export {
 	// useClickOutside,
@@ -16,4 +17,5 @@ export {
 	// useFocusController,
 	useOffset,
 	// useMouseState,
+	useNamespace,
 }

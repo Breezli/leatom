@@ -34,15 +34,28 @@ export default defineConfig({
 				],
 			},
 			{
+				text: '样式主题',
+				collapsed: false,
+				items: [
+					{ text: 'Basic 基础', link: 'components/button' },
+					{ text: 'Border 边框', link: 'components/button' },
+					{ text: 'Color 颜色', link: 'components/color' },
+					{ text: 'Text 文本', link: 'components/card' },
+					{ text: 'Icon 图标库 ✅', link: 'components/icon' },
+				],
+			},
+			{
 				text: '基础组件',
 				collapsed: false,
 				items: [
-					{ text: 'Button 按钮', link: 'components/button' },
+					{ text: 'Button 按钮 ✅', link: 'components/button' },
+					{ text: 'Card 卡片 ✅', link: 'components/card' },
 					{ text: 'Collapse 折叠面板', link: 'components/button' },
 					{ text: 'Dropdown 下拉菜单', link: 'components/button' },
-
+					{ text: 'Input 输入框', link: 'components/input' },
 				],
-			},			{
+			},
+			{
 				text: '反馈组件',
 				collapsed: false,
 				items: [{ text: 'Alert 提示', link: 'components/alert' }],
@@ -57,7 +70,7 @@ export default defineConfig({
 				],
 			},
 			{
-				text: 'Plus版',
+				text: '特效库',
 				collapsed: false,
 				items: [
 					{ text: 'Button 按钮', link: 'components/button_plus' },

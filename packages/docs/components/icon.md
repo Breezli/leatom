@@ -15,6 +15,10 @@ prev:
 
 基于 [Font Awesome](https://fontawesome.com.cn/v5) 的图标库，提供丰富的图标选择，方便在项目中使用。
 
+::: preview
+demo-preview=../demo/icon/Icon.vue
+:::
+
 ## 注意事项
 
 1. 确保项目中已正确引入 Font Awesome 样式文件。

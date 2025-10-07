@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'LXGFont';
+	src: url('/LXGWWenKaiMonoLite-Medium.ttf') format('woff');
+}
+
+* {
+	font-family: 'LXGFont', sans-serif !important;
+}

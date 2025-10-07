@@ -1,0 +1,124 @@
+$--le-card-padding: 20px;
+$--le-card-border-radius: 0.75rem;
+$--le-card-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+.le-card-group {
+	display: flex;
+	flex-direction: column;
+
+	&.is-compact {
+		gap: 8px;
+	}
+}
+
+.le-card {
+	border-radius: $--le-card-border-radius;
+	box-shadow: $--le-card-box-shadow;
+	background: #fff;
+	transition: all 0.3s;
+
+	&__header {
+		padding: $--le-card-padding;
+		border-bottom: 1px solid #ebeef5;
+		color: #303133;
+		font-size: 16px;
+		font-weight: 600;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__header-extra {
+		flex-shrink: 0; // 防止被压缩
+		margin-left: auto;
+	}
+
+	&__body {
+		padding: $--le-card-padding;
+		color: #606266;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+
+	&__footer {
+		padding: $--le-card-padding;
+		border-top: 1px solid #ebeef5;
+		color: #909399;
+		font-size: 14px;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// 组内卡片控制
+	&.is-in-group {
+		// 所有组内卡片：去除圆角
+		border-radius: 0;
+		border-bottom: 1px solid #ebeef5;
+
+		// 第一个卡片：只保留顶部圆角
+		&.is-first {
+			border-top-left-radius: $--le-card-border-radius;
+			border-top-right-radius: $--le-card-border-radius;
+		}
+
+		// 最后一个卡片：只保留底部圆角
+		&.is-last {
+			border-bottom-left-radius: $--le-card-border-radius;
+			border-bottom-right-radius: $--le-card-border-radius;
+			border-bottom: none;
+		}
+
+		// 如果只有一个卡片（既是第一个也是最后一个）
+		&:only-child {
+			border-radius: $--le-card-border-radius;
+			border-bottom: none;
+		}
+	}
+
+	// 阴影控制
+	&.is-always-shadow {
+		box-shadow: $--le-card-box-shadow;
+	}
+
+	&.is-hover {
+		&:hover {
+			cursor: pointer;
+			background-color: #f7f8fa;
+		}
+	}
+
+	&.is-hover-scale {
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.02);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		}
+	}
+
+	&.is-hover-shadow {
+		&:hover {
+			cursor: pointer;
+			transform: translateY(-3px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&.is-never-shadow {
+		box-shadow: none;
+	}
+
+	&.is-border {
+		border: none;
+	}
+
+	&.is-disabled,
+	&.is-disabled:hover,
+	&[disabled],
+	&[disabled]:hover {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+}

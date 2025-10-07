@@ -3,8 +3,8 @@ title: Button
 description: Button 组件文档
 
 next:
-  link: /get-started
-  text: Collapse 折叠面板
+  link: /components/card
+  text: Card 卡片
 
 prev:
   link: /get-started

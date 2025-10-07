@@ -1,34 +1,41 @@
 import {
-	LeIcon,
-	LeButton,
-	LeButtonGroup,
+	LeIcon, // ✅
+	LeButton, // ✅
+	LeButtonGroup, // ✅
+	LeCard, // ✅
+	LeCardGroup, // ✅
+	LeInput,
+	// LeInput,
 	// LeCollapse,
 	// LeCollapseItem,
 	// LeDropdown,
 	// LeDropdownItem,
 	// LeAlert,
 	// LeTooltip,
-	LeMessage,
+	// LeMessage,
 	// LeMessageBox,
-	LeButtonPlus,
-	LeInputPlus,
+	// LeButtonPlus,
+	// LeInputPlus,
 	// LeCardPlus,
 } from '@leatom/components'
 import type { Plugin } from 'vue'
 
 export default [
-	LeIcon,
-	LeButton,
-	LeButtonGroup,
+	LeIcon, // ✅
+	LeButton, // ✅
+	LeButtonGroup, // ✅
+	LeCard, // ✅
+	LeCardGroup, // ✅
+	LeInput,
 	// LeCollapse,
 	// LeCollapseItem,
 	// LeDropdown,
 	// LeDropdownItem,
 	// LeAlert,
 	// LeTooltip,
-	LeMessage,
+	// LeMessage,
 	// LeMessageBox,
-	LeButtonPlus,
-	LeInputPlus,
+	// LeButtonPlus,
+	// LeInputPlus,
 	// LeCardPlus,
 ] as Plugin[]

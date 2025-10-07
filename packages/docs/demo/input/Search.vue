@@ -1,0 +1,3 @@
+<template>
+	<le-search />
+</template>
