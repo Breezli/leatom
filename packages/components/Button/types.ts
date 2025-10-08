@@ -1,7 +1,7 @@
 import { type Component, type ComputedRef, type Ref } from 'vue'
 export type ButtonType = 'primary' | 'success' | 'elegant' | 'warning' | 'danger' | 'info'
 export type NativeType = 'button' | 'submit' | 'reset'
-export type ButtonSize = 'default' | 'large' | 'small'
+export type ButtonSize = 'default' | 'large' | 'small' | 'auto'
 
 export interface ButtonProps { // 按钮属性
 	tag?: string | Component

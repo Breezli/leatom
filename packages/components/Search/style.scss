@@ -1,0 +1,75 @@
+.le-search {
+	/* 容器样式：仅在中等及以上屏幕显示，居中最大宽度 */
+	&.is-container {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		&.is-container {
+			display: flex;
+			flex: 1;
+			max-width: 32rem;
+		}
+	}
+
+	/* 非容器模式：始终显示 */
+	&:not(.is-container) {
+		display: block;
+		width: 100%;
+	}
+}
+
+.le-search__wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.le-search__input {
+	width: 100%;
+	height: 2.5rem;
+	padding-left: 2.5rem;
+	padding-right: 1rem;
+	border-radius: 9999px;
+	border: none;
+	background-color: #f3f4f6;
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	font-size: 14px;
+	color: #374151;
+
+	/* 聚焦状态 */
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 2px #3b82f6;
+		background-color: white;
+	}
+
+	/* 禁用状态 */
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+		background-color: #f9fafb;
+	}
+
+	/* 占位符样式 */
+	&::placeholder {
+		color: #9ca3af;
+	}
+}
+
+.le-search__icon {
+	position: absolute;
+	left: 0.75rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #9ca3af;
+	pointer-events: none;
+	font-size: 14px;
+}
+
+/* 禁用状态 */
+.le-search.is-disabled .le-search__input {
+	opacity: 0.6;
+	cursor: not-allowed;
+	background-color: #f9fafb;
+}

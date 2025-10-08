@@ -52,7 +52,8 @@ export default defineConfig({
 					{ text: 'Card 卡片 ✅', link: 'components/card' },
 					{ text: 'Collapse 折叠面板', link: 'components/button' },
 					{ text: 'Dropdown 下拉菜单', link: 'components/button' },
-					{ text: 'Input 输入框', link: 'components/input' },
+					{ text: 'Input 输入框 ✅', link: 'components/input' },
+					{ text: 'Search 搜索栏 ✅', link: 'components/search' },
 				],
 			},
 			{

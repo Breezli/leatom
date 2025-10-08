@@ -1,12 +1,13 @@
 <script setup>
 	import { ref } from 'vue'
-	const inputValue = ref('')
+	const searchValue = ref('')
 </script>
 
 <template>
-	<le-input
-		v-model="inputValue"
+	<le-icon></le-icon>
+	<le-search
+		v-model="searchValue"
 		placeholder="Enter text..."
-		class="input-element"
-		container-class="input-container" />
+		class="search-element"
+		container-class="search-container" />
 </template>

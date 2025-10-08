@@ -17,7 +17,7 @@ const meta: Meta<typeof LeButton> = {
 		},
 		size: {
 			control: { type: 'select' },
-			options: ['large', 'default', 'small', ''],
+			options: ['large', 'default', 'small', 'auto', ''],
 		},
 		disabled: {
 			control: 'boolean',

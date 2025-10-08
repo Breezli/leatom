@@ -31,6 +31,12 @@ demo-preview=../demo/button/Basic.vue
 demo-preview=../demo/button/Size.vue
 :::
 
+::: tip
+还可以使用 `auto` 值，内部将高度设置为 `auto` 自适应
+
+可在 `Input` 组件中的表单示例中查看
+:::
+
 ## 禁用状态
 
 使用 `disabled` 属性来定义按钮是否被禁用。

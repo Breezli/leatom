@@ -4,8 +4,8 @@ import {
 	LeButtonGroup, // ✅
 	LeCard, // ✅
 	LeCardGroup, // ✅
+	LeSearch, // ✅
 	LeInput,
-	// LeInput,
 	// LeCollapse,
 	// LeCollapseItem,
 	// LeDropdown,
@@ -26,6 +26,7 @@ export default [
 	LeButtonGroup, // ✅
 	LeCard, // ✅
 	LeCardGroup, // ✅
+	LeSearch, // ✅
 	LeInput,
 	// LeCollapse,
 	// LeCollapseItem,

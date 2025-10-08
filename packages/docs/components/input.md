@@ -13,12 +13,30 @@ prev:
 
 # Input 输入框
 
-输入框
+常用的输入框组件。
 
-## Hover Input
+## Default
 
-hover流水灯
+默认的输入框样式
 
 ::: preview
-demo-preview=../demo/input/Search.vue
+demo-preview=../demo/input/Default.vue
 :::
+
+## Form 表单输入框
+
+表单式功能组件
+
+::: preview
+demo-preview=../demo/input/Form.vue
+:::
+
+## Comment 评论输入框
+
+类似评论组件的高型输入框样式
+
+::: preview
+demo-preview=../demo/input/Comment.vue
+:::
+
+## Props 属性

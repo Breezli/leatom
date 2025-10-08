@@ -1,22 +1,35 @@
 <script setup lang="ts">
-	import { ref } from 'vue'
-	import type { SearchEmits, SearchProps } from './types'
+	import { ref, computed } from 'vue'
+	import type { InputProps, InputEmits, InputInstance } from './types'
 
 	defineOptions({
-		name: 'LeSearch',
+		name: 'LeInput',
 	})
 
-	const props = withDefaults(defineProps<SearchProps>(), {
-		placeholder: '搜索文章、话题或用户',
+	// Props - 移除了 sendText 和 sending
+	const props = withDefaults(defineProps<InputProps>(), {
+		type: 'text',
 		modelValue: '',
+		placeholder: '',
 		disabled: false,
-		container: true,
 	})
 
-	const emits = defineEmits<SearchEmits>()
+	// Emits - 移除了 'send' 事件
+	const emits = defineEmits<InputEmits>()
 
-	// 输入框引用
-	const inputRef = ref<HTMLInputElement>()
+	// 引用
+	const inputRef = ref<HTMLInputElement | HTMLTextAreaElement>()
+
+	// 是否显示密码
+	const showPassword = ref(false)
+
+	// 实际输入类型（用于 password-view）
+	const inputType = computed(() => {
+		if (props.type === 'password-view') {
+			return showPassword.value ? 'text' : 'password'
+		}
+		return props.type === 'password' ? 'password' : 'text'
+	})
 
 	// 处理输入
 	const handleInput = (event: Event) => {
@@ -25,59 +38,82 @@
 		emits('input', value)
 	}
 
-	// 处理搜索（按回车）
-	const handleKeydown = (event: KeyboardEvent) => {
-		if (event.key === 'Enter') {
-			emits('search', props.modelValue)
-		}
+	// 处理 change
+	const handleChange = (event: Event) => {
+		const value = (event.target as HTMLInputElement).value
+		emits('change', value)
 	}
 
-	// 处理聚焦
+	// 聚焦
 	const handleFocus = (event: FocusEvent) => {
 		emits('focus', event)
 	}
 
-	// 处理失焦
+	// 失焦
 	const handleBlur = (event: FocusEvent) => {
 		emits('blur', event)
 	}
 
 	// 暴露方法
-	defineExpose({
+	defineExpose<InputInstance>({
 		focus: () => inputRef.value?.focus(),
 		blur: () => inputRef.value?.blur(),
-		clear: () => {
-			emits('update:modelValue', '')
-			emits('input', '')
-		},
+		select: () => inputRef.value?.select(),
 	})
 </script>
 
 <template>
 	<div
 		:class="[
-			'le-search',
+			'le-input',
+			`le-input--${type}`,
 			customClass,
-			{
-				'is-container': container,
-				'is-disabled': disabled,
-			},
+			{ 'is-disabled': disabled },
 		]"
 		:style="customStyle">
-		<div class="le-search__wrapper">
+		<!-- 普通输入框 & 密码框 -->
+		<template v-if="type !== 'comment'">
 			<input
+				ref="inputRef"
+				:value="modelValue"
+				:type="inputType"
+				:placeholder="placeholder"
+				:disabled="disabled"
+				class="le-input__input form-input-focus"
+				@input="handleInput"
+				@change="handleChange"
+				@focus="handleFocus"
+				@blur="handleBlur" />
+
+			<!-- 密码可见性切换 -->
+			<template v-if="type === 'password-view'">
+				<button
+					type="button"
+					class="le-input__toggle-btn"
+					@click="showPassword = !showPassword"
+					:disabled="disabled">
+					<le-icon
+						:icon="showPassword ? 'eye-slash' : 'eye'"
+						:color="disabled ? '#d1d5db' : '#9ca3af'"
+						size="sm" />
+				</button>
+			</template>
+		</template>
+
+		<!-- 评论输入框 -->
+		<template v-else>
+			<textarea
 				ref="inputRef"
 				:value="modelValue"
 				:placeholder="placeholder"
 				:disabled="disabled"
-				type="text"
-				class="le-search__input"
+				class="le-input__textarea form-input-focus"
+				rows="3"
 				@input="handleInput"
-				@keydown="handleKeydown"
+				@change="handleChange"
 				@focus="handleFocus"
 				@blur="handleBlur" />
-			<i class="le-search__icon fas fa-search"></i>
-		</div>
+		</template>
 	</div>
 </template>
 

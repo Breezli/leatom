@@ -1,15 +1,19 @@
 <template>
-	<p>
-		<le-button icon="search" circle />
-		<le-button icon="edit" circle />
-		<le-button icon="check" circle />
-		<le-button icon="link" circle />
-		<le-button icon="message" circle />
-		<le-button icon="star" circle />
-		<le-button icon="trash" circle />
-        <le-button icon="redo" circle />
-        <le-button icon="code" circle />
-        <le-button icon="seedling" circle />
-        <le-button icon="expand" circle />
-	</p>
+	<!-- 基础图标 -->
+	<le-icon icon="home" />
+
+	<!-- 尺寸控制 -->
+	<le-icon icon="star" size="2xl" />
+
+	<!-- 带主题色的图标 -->
+	<le-icon icon="check" type="success" />
+
+	<!-- 自定义颜色 -->
+	<le-icon icon="heart" color="#ff4757" />
+
+	<!-- 旋转图标 -->
+	<le-icon icon="sync" rotation="90" pulse />
+
+	<!-- 旋转动画 -->
+	<le-icon icon="cog" spin />
 </template>

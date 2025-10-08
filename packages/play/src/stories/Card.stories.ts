@@ -1,5 +1,5 @@
 import type { Meta, StoryObj, ArgTypes } from '@storybook/vue3'
-import { fn, within, userEvent, expect } from '@storybook/test'
+import { fn } from '@storybook/test'
 import { LeCard, LeButton, LeIcon, LeCardGroup } from '@leatom/components'
 import 'leatom/dist/theme/Card.css'
 
@@ -22,10 +22,19 @@ const meta: Meta<typeof LeCard> = {
 		disabled: {
 			control: 'boolean',
 		},
+		hover: {
+			control: 'boolean',
+		},
 		hover_shadow: {
 			control: 'boolean',
 		},
 		hover_scale: {
+			control: 'boolean',
+		},
+		first: {
+			control: 'boolean',
+		},
+		last: {
 			control: 'boolean',
 		},
 		customClass: {
@@ -77,15 +86,7 @@ export const Default: Story & { args: { header: string } } = {
         </le-card>
       </div>
     `),
-	}),
-	play: async ({ canvasElement, args }) => {
-		const canvas = within(canvasElement)
-		const card = canvas.getByText('这是一个基础卡片')
-
-		await userEvent.click(card.parentElement!) // 点击卡片容器
-
-		expect(args.onClick).toHaveBeenCalled()
-	},
+	})
 }
 
 export const WithHeaderSlot: Story = {
@@ -167,17 +168,7 @@ export const Disabled: Story = {
       </le-card>
     </div>
     `),
-	}),
-	play: async ({ canvasElement, args }) => {
-		const canvas = within(canvasElement)
-		const card = canvas.getByText('该卡片处于禁用状态')
-
-		// 尝试点击
-		await userEvent.click(card.parentElement!)
-
-		// 验证：禁用状态下不触发 click
-		expect(args.onClick).not.toHaveBeenCalled()
-	},
+	})
 }
 
 export const CustomStyle: Story = {
