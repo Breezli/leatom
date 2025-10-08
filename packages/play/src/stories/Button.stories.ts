@@ -8,7 +8,7 @@ type Story = StoryObj<typeof LeButton> & { argTypes?: ArgTypes }
 const meta: Meta<typeof LeButton> = {
 	title: 'Example/Button',
 	component: LeButton as any,
-	subcomponents: { ButtonGroup: LeButtonGroup as any},
+	subcomponents: { ButtonGroup: LeButtonGroup as any },
 	tags: ['autodocs'],
 	argTypes: {
 		type: {
@@ -70,7 +70,7 @@ export const Default: Story & { args: { content: string } } = {
 		content: 'Button', //默认按钮文本
 	},
 	render: (args: any) => ({
-		components: { LeButton }, //声明当前故事中使用的组件（VrButton）
+		components: { LeButton }, //声明当前故事中使用的组件（LeButton）
 		setup() {
 			//将 args 对象暴露给模板，使模板可以直接访问 args 中的 props
 			return { args }
@@ -163,7 +163,7 @@ export const Group: Story & { args: { content1: string; content2: string } } = {
 		content2: 'Button2',
 	},
 	render: (args: any) => ({
-		components: { LeButton, LeButtonGroup }, //用 VrButtonGroup 包裹多个按钮，实现按钮组布局
+		components: { LeButton, LeButtonGroup }, //用 LeButtonGroup 包裹多个按钮，实现按钮组布局
 		setup() {
 			return { args }
 		},

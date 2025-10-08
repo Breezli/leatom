@@ -15,7 +15,7 @@ prev:
 
 常用的搜索栏组件。
 
-## Default
+## Default 默认
 
 默认的搜索栏样式
 
@@ -23,7 +23,7 @@ prev:
 demo-preview=../demo/search/Default.vue
 :::
 
-## Container
+## Container 容器适配
 
 始终显示，适用于移动端或小屏
 
@@ -31,7 +31,7 @@ demo-preview=../demo/search/Default.vue
 demo-preview=../demo/search/Container.vue
 :::
 
-## Custom
+## Custom 自定义样式
 
 自定义样式
 
@@ -61,7 +61,7 @@ demo-preview=../demo/search/Custom.vue
 | `focus`             | 输入框获得焦点时触发             | `(event: FocusEvent)` |
 | `blur`              | 输入框失去焦点时触发             | `(event: FocusEvent)` |
 
-## 样式类名
+## Custom Style 样式类名
 
 | 类名                  | 说明                       |
 | --------------------- | -------------------------- |

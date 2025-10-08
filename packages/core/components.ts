@@ -5,12 +5,12 @@ import {
 	LeCard, // ✅
 	LeCardGroup, // ✅
 	LeSearch, // ✅
-	LeInput,
+	LeInput, // ✅
 	// LeCollapse,
 	// LeCollapseItem,
 	// LeDropdown,
 	// LeDropdownItem,
-	// LeAlert,
+	LeAlert,
 	// LeTooltip,
 	// LeMessage,
 	// LeMessageBox,
@@ -27,12 +27,12 @@ export default [
 	LeCard, // ✅
 	LeCardGroup, // ✅
 	LeSearch, // ✅
-	LeInput,
+	LeInput, // ✅
 	// LeCollapse,
 	// LeCollapseItem,
 	// LeDropdown,
 	// LeDropdownItem,
-	// LeAlert,
+	LeAlert,
 	// LeTooltip,
 	// LeMessage,
 	// LeMessageBox,

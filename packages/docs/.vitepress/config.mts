@@ -39,7 +39,7 @@ export default defineConfig({
 				items: [
 					{ text: 'Basic 基础', link: 'components/button' },
 					{ text: 'Border 边框', link: 'components/button' },
-					{ text: 'Color 颜色', link: 'components/color' },
+					{ text: 'Color 颜色 ✅', link: 'components/color' },
 					{ text: 'Text 文本', link: 'components/card' },
 					{ text: 'Icon 图标库 ✅', link: 'components/icon' },
 				],
@@ -59,7 +59,7 @@ export default defineConfig({
 			{
 				text: '反馈组件',
 				collapsed: false,
-				items: [{ text: 'Alert 提示', link: 'components/alert' }],
+				items: [{ text: 'Alert 提示 ✅', link: 'components/alert' }],
 			},
 			{
 				text: '数据展示',
