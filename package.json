@@ -8,9 +8,8 @@
 		"docs:dev": "pnpm --filter @leatom/docs dev",
 		"docs:build": "cross-env NODE_ENV=production pnpm build && pnpm --filter @leatom/docs build",
 		"test": "pnpm --filter @leatom/components test",
-		"build": "run-s build-hooks build-components",
-		"build-components": "cross-env NODE_ENV=production pnpm --filter leatom build",
-		"build-hooks": "cross-env NODE_ENV=production pnpm --filter @leatom/hooks build"
+		"build": "run-s build-components",
+		"build-components": "cross-env NODE_ENV=production pnpm --filter leatom build"
 	},
 	"keywords": [],
 	"author": "Lec",
