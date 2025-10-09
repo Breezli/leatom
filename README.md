@@ -1,3 +1,7 @@
+### 文档地址
+
+[Leatom 组件库](https://breezli.github.io/leatom/)
+
 ### 项目简介
 
 技术栈：**Vue 3 + TypeScript + Vite**
