@@ -36,9 +36,14 @@ function normalizeOptions(options: MessageParams): CreateMessageProps {
 }
 
 function createMessage(props: CreateMessageProps): MessageInstance {
+	const MAX_MESSAGES = 5
 	const id = useId().value
 	if (typeof document === 'undefined') {
 		throw new Error('createMessage should only be called in the browser.')
+	}
+	if (instances.length >= MAX_MESSAGES) {
+		const firstInstance = instances[0]
+		firstInstance.handler.close()
 	}
 	const container = document.createElement('div')
 	const destory = () => {
@@ -49,7 +54,6 @@ function createMessage(props: CreateMessageProps): MessageInstance {
 
 		render(null, container)
 	}
-
 	const _props = {
 		...props,
 		id,

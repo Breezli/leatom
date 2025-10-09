@@ -13,7 +13,9 @@ prev:
 
 # Message 消息提示
 
-常用于主动操作后的反馈提示。 与 Notification 的区别是后者更多用于系统级通知的被动提醒。
+常用于主动操作后的反馈提示。
+
+> 与 Notification 的区别是后者更多用于系统级通知的被动提醒。
 
 ## 基本用法
 
@@ -27,7 +29,7 @@ demo-preview=../demo/message/Test.vue
 
 ## 不同类型
 
-用来显示「成功、警告、消息、错误」类的操作反馈。通过 `type` 属性来配置。
+用来显示「消息、成功、警告、错误」类的操作反馈。通过 `type` 属性来配置。
 
 ::: preview
 demo-preview=../demo/message/Type.vue
@@ -39,6 +41,24 @@ demo-preview=../demo/message/Type.vue
 
 ::: preview
 demo-preview=../demo/message/Closeable.vue
+:::
+
+## 延时设置
+
+通过 `duration` 属性配置消息的存在延时时间。
+
+::: preview
+demo-preview=../demo/message/Duration.vue
+:::
+
+> ps: 为了更好的用户体验，同类型最多同时存在五条。
+
+## 间距类型
+
+通过 `offset` 属性配置消息之间的间隔。
+
+::: preview
+demo-preview=../demo/message/Offset.vue
 :::
 
 ## 文字居中

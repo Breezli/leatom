@@ -17,3 +17,9 @@ export function useId(namespace: string = "er"): Ref<string> {
 }
 
 export default useId;
+
+// const id1 = useId(); // 假设结果: 'er-id-3498-0'
+// const id2 = useId("btn"); // 结果: 'btn-id-3498-1'
+
+// console.log(id1.value); // "er-id-3498-0"
+// console.log(id2.value); // "btn-id-3498-1"

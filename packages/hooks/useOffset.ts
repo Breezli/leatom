@@ -2,9 +2,9 @@ import { type Ref, computed } from "vue";
 
 interface useOffsetOptions {
   // id: string;
-  offset: number;
-  boxHeight: Ref<number>;
-  getLastBottomOffset: () => number;
+  offset: number; // 间距
+  boxHeight: Ref<number>; // 消息高度
+  getLastBottomOffset: () => number; // 获取函数
 }
 
 interface useOffsetResult {

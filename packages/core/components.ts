@@ -6,13 +6,13 @@ import {
 	LeCardGroup, // ✅
 	LeSearch, // ✅
 	LeInput, // ✅
+	LeAlert, // ✅
+	LeMessage, // ✅
 	// LeCollapse,
 	// LeCollapseItem,
 	// LeDropdown,
 	// LeDropdownItem,
-	LeAlert,
 	// LeTooltip,
-	// LeMessage,
 	// LeMessageBox,
 	// LeButtonPlus,
 	// LeInputPlus,
@@ -28,13 +28,13 @@ export default [
 	LeCardGroup, // ✅
 	LeSearch, // ✅
 	LeInput, // ✅
+	LeAlert, // ✅
+	LeMessage, // ✅
 	// LeCollapse,
 	// LeCollapseItem,
 	// LeDropdown,
 	// LeDropdownItem,
-	LeAlert,
 	// LeTooltip,
-	// LeMessage,
 	// LeMessageBox,
 	// LeButtonPlus,
 	// LeInputPlus,
