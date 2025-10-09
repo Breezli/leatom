@@ -27,10 +27,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: pnpm
+          cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        uses: pnpm/action-setup@v3
+        id: setup-pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
