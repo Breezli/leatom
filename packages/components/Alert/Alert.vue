@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import type { AlertProps, AlertEmits, AlertInstance } from './types'
-	import { ref, useSlots, computed } from 'vue'
+	import { ref, computed } from 'vue'
 	import { typeIconMap } from '@leatom/utils'
 	import LeIcon from '../Icon/Icon.vue'
 
@@ -13,7 +13,7 @@
 		closable: true,
 	})
 	const emits = defineEmits<AlertEmits>()
-	const slots = useSlots()
+	const slots = defineSlots()
 
 	const visible = ref(true)
 
