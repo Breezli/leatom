@@ -66,7 +66,7 @@ export default defineConfig({
 				collapsed: false,
 				items: [
 					{ text: 'Tooltip 提示', link: 'components/tooltip' },
-					{ text: 'Message 消息提示' ✅, link: 'components/message' },
+					{ text: 'Message 消息提示 ✅', link: 'components/message' },
 					{ text: 'MessageBox 弹框', link: 'components/messagebox' },
 				],
 			},
