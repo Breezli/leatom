@@ -8,7 +8,6 @@
 	const keyword = ref('')
 
 	const handleSearch = (value: string) => {
-		console.log('搜索:', value)
 		// 执行搜索逻辑
 	}
 </script>
