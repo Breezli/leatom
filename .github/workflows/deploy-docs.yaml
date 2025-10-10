@@ -30,15 +30,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'pnpm'
 
       - name: Install pnpm CLI
         uses: pnpm/action-setup@v3
+        with:
+          run_install: false
 
-      - name: Add pnpm to PATH
-        run: |
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-          pnpm --version
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
