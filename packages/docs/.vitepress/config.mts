@@ -9,7 +9,7 @@ export default defineConfig({
 	title: 'Leatom',
 	description: '融合工程化实践与AI生产力的现代前端开发套件',
 	appearance: false, // 是否允许用户切换深色/浅色模式，深色模式做好再开
-	base: '/Leatom/',
+	base: '/leatom/',
 	vite: {
 		ssr: {
 			noExternal: ['leatom'], // 组件库参与 SSR 构建
