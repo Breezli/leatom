@@ -20,7 +20,7 @@ prev:
 默认的搜索栏样式
 
 ::: preview
-demo-preview=../demo/search/Default.vue
+demo-preview=../demo/search_/Default.vue
 :::
 
 ## Container 容器适配
@@ -28,7 +28,7 @@ demo-preview=../demo/search/Default.vue
 始终显示，适用于移动端或小屏
 
 ::: preview
-demo-preview=../demo/search/Container.vue
+demo-preview=../demo/search_/Container.vue
 :::
 
 ## Custom 自定义样式
@@ -36,7 +36,7 @@ demo-preview=../demo/search/Container.vue
 自定义样式
 
 ::: preview
-demo-preview=../demo/search/Custom.vue
+demo-preview=../demo/search_/Custom.vue
 :::
 
 ## Props 属性
